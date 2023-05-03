@@ -1,24 +1,22 @@
 import 'package:flutter/material.dart';
 
-class SecondScreen extends StatelessWidget {
-  final String data;
-  const SecondScreen({super.key, required this.data});
+class ThirdScreen extends StatelessWidget {
+  const ThirdScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Layar Kedua"),
+        title: Text("Layar Ketiga"),
         backgroundColor: Colors.red,
       ),
       body: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text(data),
             ElevatedButton(
                 onPressed: () {
-                  Navigator.pop(context);
+                  Navigator.pop(context, 'Data dari layar ketiga');
                 },
                 child: Text("Kembali"))
           ],
